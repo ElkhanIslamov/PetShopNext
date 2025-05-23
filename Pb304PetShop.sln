@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pb304PetShop", "Pb304PetShop\Pb304PetShop.csproj", "{4D588293-C09F-46C5-8C15-544444BCB977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailing", "Mailing\Mailing.csproj", "{C270A2D3-F039-BB9C-3959-BD7CD6EE8E9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D588293-C09F-46C5-8C15-544444BCB977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D588293-C09F-46C5-8C15-544444BCB977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D588293-C09F-46C5-8C15-544444BCB977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D588293-C09F-46C5-8C15-544444BCB977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C270A2D3-F039-BB9C-3959-BD7CD6EE8E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C270A2D3-F039-BB9C-3959-BD7CD6EE8E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C270A2D3-F039-BB9C-3959-BD7CD6EE8E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C270A2D3-F039-BB9C-3959-BD7CD6EE8E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC1C6515-3C7D-4AF7-BA49-14B17BB7FB2F}
+	EndGlobalSection
+EndGlobal
