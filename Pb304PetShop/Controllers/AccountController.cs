@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Pb304PetShop.DataContext.Entities;
+using Pb304PetShop.Helpers;
 using Pb304PetShop.Models;
 
 namespace Pb304PetShop.Controllers
@@ -12,12 +13,14 @@ namespace Pb304PetShop.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IMailService _mailService;
+        private readonly IConfiguration _configuration;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IMailService mailService)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IMailService mailService, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _mailService = mailService;
+            _configuration = configuration;
         }
 
         public IActionResult Register()
@@ -51,6 +54,20 @@ namespace Pb304PetShop.Controllers
 
                 return View();
             }
+            string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            string link = Url.Action("ConfirmEmail", "Auth", new { email = user.Email, token },
+             HttpContext.Request.Scheme, HttpContext.Request.Host.Value);
+            string body = $"<a href='{link}'>Confirm Email</a>";
+
+            EmailHelper emailHelper = new EmailHelper(_configuration);
+            await emailHelper.SendEmailAsync(new MailRequest
+            {
+                ToEmail = user.Email,
+                Subject = "Confirm Email",
+                Body = body
+            });
+
+
 
             return RedirectToAction(nameof(Login));
         }
