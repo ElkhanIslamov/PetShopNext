@@ -55,7 +55,7 @@ namespace Pb304PetShop.Controllers
                 return View();
             }
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            string link = Url.Action("ConfirmEmail", "Auth", new { email = user.Email, token },
+            string link = Url.Action("ConfirmEmail", "Account", new { email = user.Email, token },
              HttpContext.Request.Scheme, HttpContext.Request.Host.Value);
             string body = $"<a href='{link}'>Confirm Email</a>";
 

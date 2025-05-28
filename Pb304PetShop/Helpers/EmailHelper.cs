@@ -20,7 +20,7 @@ public class EmailHelper
     public async Task SendEmailAsync(MailRequest mailRequest)
     {
         var email = new MimeMessage();
-        email.Sender = MailboxAddress.Parse(_configuration["MailSettings:Mail"]);
+        email.Sender = MailboxAddress.Parse(_configuration["MailSettings:SenderEmail"]);
         email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
         email.Subject = mailRequest.Subject;
         var builder = new BodyBuilder();
