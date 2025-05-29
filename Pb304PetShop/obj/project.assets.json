@@ -2864,10 +2864,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MailKit": "3.1.1",
+          "MailKit": "4.12.1",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Configuration.Binder": "8.0.0",
-          "MimeKit": "4.1.0"
+          "MimeKit": "4.12.0"
         },
         "compile": {
           "bin/placeholder/Mailing.dll": {}
@@ -7982,14 +7982,12 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MailKit >= 4.12.1",
       "Mailing >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.15",
       "Microsoft.EntityFrameworkCore >= 8.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.15",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
-      "MimeKit >= 4.12.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7"
     ]
   },
   "packageFolders": {
@@ -8046,10 +8044,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "MailKit": {
-            "target": "Package",
-            "version": "[4.12.1, )"
-          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.15, )"
@@ -8071,10 +8065,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.7, )"
-          },
-          "MimeKit": {
-            "target": "Package",
-            "version": "[4.12.0, )"
           }
         },
         "imports": [

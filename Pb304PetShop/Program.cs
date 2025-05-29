@@ -44,6 +44,8 @@ namespace Pb304PetShop
 
             builder.Services.AddTransient<IMailService, MailKitMailService>();
             builder.Services.Configure<SuperAdmin>(builder.Configuration.GetSection("SuperAdmin"));
+            builder.Services.AddScoped<IMailService, MailKitMailService>();
+
 
             var app = builder.Build();
 

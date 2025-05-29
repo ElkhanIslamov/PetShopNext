@@ -12,7 +12,7 @@ public class MailKitMailService : IMailService
     {
         _mailSettings = configuration.GetSection("MailSettings").Get<MailSettings>();
     }
-
+   
     public void SendMail(Mail mail)
     {
         if (mail == null) throw new ArgumentNullException("Email not defined.");

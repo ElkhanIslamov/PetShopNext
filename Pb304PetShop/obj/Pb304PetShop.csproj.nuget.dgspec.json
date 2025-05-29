@@ -52,7 +52,7 @@
           "dependencies": {
             "MailKit": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[4.12.1, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -64,7 +64,7 @@
             },
             "MimeKit": {
               "target": "Package",
-              "version": "[4.1.0, )"
+              "version": "[4.12.0, )"
             }
           },
           "imports": [
@@ -137,10 +137,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[4.12.1, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.15, )"
@@ -162,10 +158,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[4.12.0, )"
             }
           },
           "imports": [
